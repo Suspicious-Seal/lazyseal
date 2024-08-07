@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 alias py=python3
 echo "alias py=python3" >> .bashrc
 
