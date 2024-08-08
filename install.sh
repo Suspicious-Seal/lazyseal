@@ -35,6 +35,13 @@ else
     echo "Powerlevel10k theme already installed."
 fi
 
+echo "Installing P10K Configuration"
+rm ~/.p10k.zsh
+cp .p10k.zsh ~/.p10k.zsh
+echo "Installing OHMYZSH configuration"
+rm -rf ~/.oh-my-zsh
+cp -r .oh-my-zsh ~/.oh-my-zsh
+
 echo "Installing languages"
 sudo apt install golang
 sudo apt install rust
