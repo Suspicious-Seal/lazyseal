@@ -2,8 +2,6 @@
 
 echo "Installing ZSH"
 sudo apt install zsh
-echo "Switching to ZSH"
-exec zsh
 echo "exec zsh" >> ~/.bashrc
 
 echo "Adding OhMyZSH + P10K and their respective configurations"
@@ -38,14 +36,11 @@ fi
 echo "Installing P10K Configuration"
 rm ~/.p10k.zsh
 cp .p10k.zsh ~/.p10k.zsh
-echo "Installing OHMYZSH configuration"
-rm -rf ~/.oh-my-zsh
-cp -r .oh-my-zsh ~/.oh-my-zsh
 
 echo "Installing languages"
 sudo apt install golang
 sudo apt install rust
-sudo apt install python
+sudo apt install python3
 alias py=python3
 echo "alias py=python3" >> ~/.zshrc
 
@@ -59,3 +54,5 @@ echo "Installing Zoxide"
 sudo apt install zoxide
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 eval "$(zoxide init zsh)"
+
+echo "Finished LazySeal setup."
